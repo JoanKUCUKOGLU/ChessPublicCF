@@ -5,22 +5,36 @@ import fr.rphstudio.chess.interf.EmptyCellException;
 import fr.rphstudio.chess.interf.IChess;
 import fr.rphstudio.chess.interf.OutOfBoardException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChessModel implements IChess {
-    @Override
+
+    private static IChess instance;
+
+    private ChessModel() {
+    }
+
+    public static IChess getInstance() {
+        if (ChessModel.instance == null) {
+            ChessModel.instance = new ChessModel();
+        }
+        return ChessModel.instance;
+    }
+
+    //@Overridegit remote add origin https://github.com/JoanKUCUKOGLU/ChessPublicCF.git
     public void reinit() {
 
     }
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        return null;
+        throw new EmptyCellException();
     }
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        return null;
+        throw new EmptyCellException();
     }
 
     @Override
@@ -30,7 +44,8 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
-        return null;
+
+        return new ArrayList<>();
     }
 
     @Override
@@ -45,7 +60,8 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessType> getRemovedPieces(ChessColor color) {
-        return null;
+
+        return new ArrayList<>();
     }
 
     @Override
