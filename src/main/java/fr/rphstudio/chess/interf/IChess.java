@@ -146,73 +146,73 @@ public interface IChess
     //--------------------------------------------------------------------
 
     /**
-     * Horizontal dimension of the chess board (in number of cells).
+     * Horizontal dimension of the chess Board (in number of cells).
      */
     public final static int BOARD_WIDTH  = 8;
 
     /**
-     * Vertical dimension of the chess board (in number of cells).
+     * Vertical dimension of the chess Board (in number of cells).
      */
     public final static int BOARD_HEIGHT = 8;
 
     /**
-     * Vertical position of the white king row on the board (in cell unit, starts at 0).
+     * Vertical position of the white king row on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_Y_WHITE_PIECES = 7;
 
     /**
-     * Vertical position of the white pawn row on the board (in cell unit, starts at 0).
+     * Vertical position of the white pawn row on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_Y_WHITE_PAWNS  = 6;
 
     /**
-     * Vertical position of the black pawn row on the board (in cell unit, starts at 0).
+     * Vertical position of the black pawn row on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_Y_BLACK_PAWNS  = 1;
 
     /**
-     * Vertical position of the black king row on the board (in cell unit, starts at 0).
+     * Vertical position of the black king row on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_Y_BLACK_PIECES = 0;
     // Init positions (X)
 
     /**
-     * Horizontal position of the ROOK #1 on the board (in cell unit, starts at 0).
+     * Horizontal position of the ROOK #1 on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_QUEENSIDE_ROOK   = 0;
 
     /**
-     * Horizontal position of the KNIGHT #1 on the board (in cell unit, starts at 0).
+     * Horizontal position of the KNIGHT #1 on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_QUEENSIDE_KNIGHT = 1;
 
     /**
-     * Horizontal position of the BISHOP #1 on the board (in cell unit, starts at 0).
+     * Horizontal position of the BISHOP #1 on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_QUEENSIDE_BISHOP = 2;
 
     /**
-     * Horizontal position of the QUEEN on the board (in cell unit, starts at 0).
+     * Horizontal position of the QUEEN on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_QUEEN   = 3;
 
     /**
-     * Horizontal position of the KING on the board (in cell unit, starts at 0).
+     * Horizontal position of the KING on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_KING    = 4;
 
     /**
-     * Horizontal position of the BISHOP #2 on the board (in cell unit, starts at 0).
+     * Horizontal position of the BISHOP #2 on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_KINGSIDE_BISHOP = 5;
 
     /**
-     * Horizontal position of the KNIGHT #2 on the board (in cell unit, starts at 0).
+     * Horizontal position of the KNIGHT #2 on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_KINGSIDE_KNIGHT = 6;
 
     /**
-     * Horizontal position of the ROOK #2 on the board (in cell unit, starts at 0).
+     * Horizontal position of the ROOK #2 on the Board (in cell unit, starts at 0).
      */
     public final static int BOARD_POS_X_KINGSIDE_ROOK   = 7;
     
@@ -223,39 +223,39 @@ public interface IChess
 
     /**
      * Creates a new chess game.
-     * This methods must set all the piece positions on the board according to interface constants.
+     * This methods must set all the piece positions on the Board according to interface constants.
      */
     public void reinit();
 
     /**
-     * Gets the type of a piece at the given position on the board.
-     * @param p x/y position on the board where we want to get the piece type.
+     * Gets the type of a piece at the given position on the Board.
+     * @param p x/y position on the Board where we want to get the piece type.
      * @return the piece type at the requested position. Values are taken from ChessType.
      * @throws EmptyCellException when the targeted cell contains no piece.
-     * @throws OutOfBoardException when the position is outside the chess board.
+     * @throws OutOfBoardException when the position is outside the chess Board.
      */
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException;
 
     /**
-     * Gets the color of a piece at the given position on the board.
-     * @param p x/y position on the board where we want to get the piece color.
+     * Gets the color of a piece at the given position on the Board.
+     * @param p x/y position on the Board where we want to get the piece color.
      * @return the piece color at the requested position. Values are taken from ChessColor.
      * @throws EmptyCellException when the targeted cell contains no piece.
-     * @throws OutOfBoardException when the position is outside the chess board.
+     * @throws OutOfBoardException when the position is outside the chess Board.
      */
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException;
 
     /**
-     * Count the remaining pieces on the board for a specific color.
+     * Count the remaining pieces on the Board for a specific color.
      * @param color the requested color of the pieces to count.
      * @return count of remaining pieces.
      */
     public int getNbRemainingPieces(ChessColor color);
 
     /**
-     * Gets the list of possible moves for a piece on the board.
-     * This is up to this method to ensure the moves are possible or not for each piece on the board.
-     * This list may be empty because either there is no possible move or because the requested position is empty or outside the board.
+     * Gets the list of possible moves for a piece on the Board.
+     * This is up to this method to ensure the moves are possible or not for each piece on the Board.
+     * This list may be empty because either there is no possible move or because the requested position is empty or outside the Board.
      * @param p requested piece position.
      * @return the list of possible moves for the requested piece position. The returned list reference must not be null.
      */
@@ -265,8 +265,8 @@ public interface IChess
      * Moves a piece from a position to another.
      * This method does not check if the move is possible or not.
      * We assume the destinaton position has been taken from getPieceMoves returned list, so it is always valid.
-     * @param p0 source position on the board.
-     * @param p1 destination position on the board.
+     * @param p0 source position on the Board.
+     * @param p1 destination position on the Board.
      */
     public void movePiece(ChessPosition p0, ChessPosition p1);
 
@@ -288,7 +288,7 @@ public interface IChess
     public List<ChessType> getRemovedPieces(ChessColor color);
     
     /**
-     * Cancel the very last move, setting the board with the state it was previously.
+     * Cancel the very last move, setting the Board with the state it was previously.
      * Once this method is called, any other call will do nothing until we have moved one piece again.
      * This method is designed to cancel the very last move, nothing less, nothing more.
      * In other words, the implementation class must only keep one move in memory.

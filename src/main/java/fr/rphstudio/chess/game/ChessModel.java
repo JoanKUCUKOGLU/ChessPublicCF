@@ -11,8 +11,10 @@ import java.util.List;
 public class ChessModel implements IChess {
 
     private static IChess instance;
+    private static Board board;
 
     private ChessModel() {
+        ChessModel.board = new Board();
     }
 
     public static IChess getInstance() {

@@ -95,12 +95,12 @@ class ChessGameController extends BasicGameState
     //------------------------------------------------
     
     /**
-     * Reference screen X-axis position for the chess board.
+     * Reference screen X-axis position for the chess Board.
      */
     private int            refX;
     
     /**
-     * Reference screen Y-axis position for the chess board.
+     * Reference screen Y-axis position for the chess Board.
      */
     private int            refY;    
     
@@ -115,17 +115,17 @@ class ChessGameController extends BasicGameState
     private int            offY;    
     
     /**
-     * Y-Axis offset used to adjust board and pieces
+     * Y-Axis offset used to adjust Board and pieces
      */
     private int            offBoardY;    
     
     /**
-     * Size of a chess board cell (X-axis).
+     * Size of a chess Board cell (X-axis).
      */
     private int            offCellX; 
     
     /**
-     * Size of a chess board cell (Y-axis).
+     * Size of a chess Board cell (Y-axis).
      */
     private int            offCellY; 
     
@@ -155,7 +155,7 @@ class ChessGameController extends BasicGameState
     private Image          highlightGfx;   
     
     /**
-     * Graphic element for the chess board.
+     * Graphic element for the chess Board.
      */
     private Image          boardGfx;
     
@@ -342,7 +342,7 @@ class ChessGameController extends BasicGameState
      * @param g graphic object used to display information on screen.
      * @param img image to draw.
      * @param clr color used as a filter for the image.
-     * @param cellPos chess board position where the image will be displayed.
+     * @param cellPos chess Board position where the image will be displayed.
      */
     private void drawImage(Graphics g, Image img, Color clr, ChessPosition cellPos)
     {
@@ -356,7 +356,7 @@ class ChessGameController extends BasicGameState
     /**
      * Draw a cell highlight image
      * @param g graphic object used to display information on screen.
-     * @param cellPos chess board position where the image will be displayed.
+     * @param cellPos chess Board position where the image will be displayed.
      */
     private void drawHighlight(Graphics g, ChessPosition cellPos)
     {
@@ -366,7 +366,7 @@ class ChessGameController extends BasicGameState
     /**
      * Draw a possible move image
      * @param g graphic object used to display information on screen.
-     * @param cellPos chess board position where the image will be displayed.
+     * @param cellPos chess Board position where the image will be displayed.
      */
     private void drawPossible(Graphics g, ChessPosition cellPos)
     {
@@ -376,7 +376,7 @@ class ChessGameController extends BasicGameState
     /**
      * Draw a selected cell image
      * @param g graphic object used to display information on screen.
-     * @param cellPos chess board position where the image will be displayed.
+     * @param cellPos chess Board position where the image will be displayed.
      */
     private void drawSelect(Graphics g, ChessPosition cellPos)
     {
@@ -401,15 +401,15 @@ class ChessGameController extends BasicGameState
         // font manager
         this.chessFont     = new ChessFontManager("./sprites/fontchess.png", 40, 40 );
         
-        // Reinit the board and start the game
+        // Reinit the Board and start the game
         this.board.reinit();
     }
     
     /**
-     * Static method that converts screen mouse position into a chess board cell position
+     * Static method that converts screen mouse position into a chess Board cell position
      * @param mouseX screen X-axis mouse position.
      * @param mouseY screen Y-axis mouse position.
-     * @return the chess board cell position object.
+     * @return the chess Board cell position object.
      */
     private ChessPosition getCellPosition(int mouseX, int mouseY)
     {   
@@ -418,7 +418,7 @@ class ChessGameController extends BasicGameState
         mouseY = (int)(mouseY/MainLauncher.RATIO_XY);
         mouseX -= MainLauncher.OFFSET_X;
         mouseY -= MainLauncher.OFFSET_Y;
-        // Set mouse position relative to the board position  
+        // Set mouse position relative to the Board position
         mouseX -= this.refX;
         mouseY -= this.refY+this.offBoardY;
         if(mouseX < 0)
@@ -807,7 +807,7 @@ class ChessGameController extends BasicGameState
         
         /* ***************************************************************************** 
          * /!\ You need to instanciate your "IChess" interface implementation class /!\
-         * /!\ and store its reference into the "board" private field.              /!\
+         * /!\ and store its reference into the "Board" private field.              /!\
          * /!\ In order to do this you MUST use the singleton design pattern        /!\
          * /!\ to have only one possible instance of game.                          /!\
          * *****************************************************************************/
@@ -860,7 +860,7 @@ class ChessGameController extends BasicGameState
         // display the background
         g.drawImage(this.backGfx, 0, 0, new Color(255,255,255,96));
         
-        // Display the board
+        // Display the Board
         g.drawImage(this.boardGfx, this.refX, this.refY+this.offBoardY);
         
         // Highlight the cell under the mouse pointer

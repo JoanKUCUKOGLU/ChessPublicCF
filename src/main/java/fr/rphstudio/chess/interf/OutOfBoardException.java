@@ -1,7 +1,7 @@
 package fr.rphstudio.chess.interf;
 
 /**
- * Exception used when an action is performed with a position outside of the chess board.
+ * Exception used when an action is performed with a position outside of the chess Board.
  * It extends the ChessException class.
  * @author Romuald GRIGNON
  */
