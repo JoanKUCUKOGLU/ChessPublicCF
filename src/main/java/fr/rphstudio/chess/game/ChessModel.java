@@ -12,17 +12,18 @@ public class ChessModel implements IChess {
 
     private static IChess instance;
 
-    private ChessModel() {
+    private ChessModel(){
     }
 
-    public static IChess getInstance() {
-        if (ChessModel.instance == null) {
+    public static IChess getInstance(){
+
+        if (ChessModel.instance == null){
             ChessModel.instance = new ChessModel();
         }
         return ChessModel.instance;
     }
 
-    //@Overridegit remote add origin https://github.com/JoanKUCUKOGLU/ChessPublicCF.git
+    @Override
     public void reinit() {
 
     }
