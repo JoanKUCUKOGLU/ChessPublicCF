@@ -92,4 +92,12 @@ public class Board{
         return count;
 
     }
+
+    public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest){
+
+
+
+        this.tab[pDest.y][pDest.x] = getPiece(pSource.y,pSource.x);
+        this.tab[pSource.y][pSource.x] = null;
+    }
 }

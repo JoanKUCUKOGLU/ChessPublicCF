@@ -94,12 +94,60 @@ public class ChessModel implements IChess {
 
     @Override
     public void movePiece(ChessPosition p0, ChessPosition p1) {
-
+        board.movePiece(p0, p1);
     }
 
     @Override
     public ChessKingState getKingState(ChessColor color) {
-        return null;
+
+        ChessPosition kingPosition = null;
+
+        for (int i = 0; i < 8 && kingPosition == null; i++) {
+
+            for (int j = 0; j < 8 && kingPosition == null; j++) {
+
+                Piece currentPiece = board.getPiece(i, j);
+                if(currentPiece != null){
+                    if (currentPiece.getType() == ChessType.TYP_KING && currentPiece.getColor() == color){
+
+                        kingPosition = new ChessPosition(j,i);
+
+                    }
+                }
+            }
+        }
+        if(kingPosition == null){
+            return ChessKingState.KING_SAFE;
+        }
+
+        // FOr each row
+        for (int i = 0; i < 8; i++) {
+            // For each column
+            for (int j = 0; j < 8; j++) {
+                // Get piece for the current position j,i
+                Piece currentPiece = board.getPiece(i, j);
+                // If the piece exists (the cell is not empty)
+                if(currentPiece != null){
+                    // If the color of the current piece is the enemy color
+                    if(currentPiece.getColor() != color){
+                        // GEt position object for the current piece
+                        ChessPosition currentPos = new ChessPosition(j,i);
+                        // Get the possible moves of the enemy piece
+                        List<ChessPosition> posList = currentPiece.getMoves(currentPos,board);
+                        // For each possible move of the enemy
+                        for(ChessPosition p: posList){
+                            // If the current king position is equals to the enemy destination, that means the king is threaten
+                            if(p.equals(kingPosition)){
+                                return ChessKingState.KING_THREATEN;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // no enemy possible move that threats the king has been found
+        return ChessKingState.KING_SAFE;
     }
 
     @Override
