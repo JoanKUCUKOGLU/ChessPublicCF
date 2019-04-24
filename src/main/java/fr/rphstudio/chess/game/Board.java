@@ -6,7 +6,7 @@ import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_BLACK;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_WHITE;
 import static fr.rphstudio.chess.interf.IChess.ChessType.*;
 
-public class Board {
+public class Board{
 
     private Piece[][] tab;
 
@@ -32,31 +32,31 @@ public class Board {
 
         // Setting black and white paws
         for(int i = 0; i<8; i++){
-            tab[y_BlackPaws][i] = new Piece(CLR_BLACK, TYP_PAWN);
+            tab[y_BlackPaws][i] = new Piece(CLR_BLACK, TYP_PAWN, new KnightMove());
 
-            tab[y_WhitePaws][i] = new Piece(CLR_WHITE, TYP_PAWN);
+            tab[y_WhitePaws][i] = new Piece(CLR_WHITE, TYP_PAWN, new KnightMove());
         }
 
-        tab[y_BlackPiece][x_LeftRook] = new Piece(CLR_BLACK, TYP_ROOK);
-        tab[y_BlackPiece][x_RightRook] = new Piece(CLR_BLACK, TYP_ROOK);
-        tab[y_WhitePiece][x_LeftRook] = new Piece(CLR_WHITE, TYP_ROOK);
-        tab[y_WhitePiece][x_RightRook] = new Piece(CLR_WHITE, TYP_ROOK);
+        tab[y_BlackPiece][x_LeftRook] = new Piece(CLR_BLACK, TYP_ROOK, new KnightMove());
+        tab[y_BlackPiece][x_RightRook] = new Piece(CLR_BLACK, TYP_ROOK, new KnightMove());
+        tab[y_WhitePiece][x_LeftRook] = new Piece(CLR_WHITE, TYP_ROOK, new KnightMove());
+        tab[y_WhitePiece][x_RightRook] = new Piece(CLR_WHITE, TYP_ROOK, new KnightMove());
 
-        tab[y_BlackPiece][x_LeftKnight] = new Piece(CLR_BLACK, TYP_KNIGHT);
-        tab[y_BlackPiece][x_RightKnight] = new Piece(CLR_BLACK, TYP_KNIGHT);
-        tab[y_WhitePiece][x_LeftKnight] = new Piece(CLR_WHITE, TYP_KNIGHT);
-        tab[y_WhitePiece][x_RightKnight] = new Piece(CLR_WHITE, TYP_KNIGHT);
+        tab[y_BlackPiece][x_LeftKnight] = new Piece(CLR_BLACK, TYP_KNIGHT, new KnightMove());
+        tab[y_BlackPiece][x_RightKnight] = new Piece(CLR_BLACK, TYP_KNIGHT, new KnightMove());
+        tab[y_WhitePiece][x_LeftKnight] = new Piece(CLR_WHITE, TYP_KNIGHT, new KnightMove());
+        tab[y_WhitePiece][x_RightKnight] = new Piece(CLR_WHITE, TYP_KNIGHT, new KnightMove());
 
-        tab[y_BlackPiece][x_LeftBishop] = new Piece(CLR_BLACK, TYP_BISHOP);
-        tab[y_BlackPiece][x_RightBishop] = new Piece(CLR_BLACK, TYP_BISHOP);
-        tab[y_WhitePiece][x_LeftBishop] = new Piece(CLR_WHITE, TYP_BISHOP);
-        tab[y_WhitePiece][x_RightBishop] = new Piece(CLR_WHITE, TYP_BISHOP);
+        tab[y_BlackPiece][x_LeftBishop] = new Piece(CLR_BLACK, TYP_BISHOP, new KnightMove());
+        tab[y_BlackPiece][x_RightBishop] = new Piece(CLR_BLACK, TYP_BISHOP, new KnightMove());
+        tab[y_WhitePiece][x_LeftBishop] = new Piece(CLR_WHITE, TYP_BISHOP, new KnightMove());
+        tab[y_WhitePiece][x_RightBishop] = new Piece(CLR_WHITE, TYP_BISHOP, new KnightMove());
 
-        tab[y_BlackPiece][x_Queen] = new Piece(CLR_BLACK, TYP_QUEEN);
-        tab[y_WhitePiece][x_Queen] = new Piece(CLR_WHITE, TYP_QUEEN);
+        tab[y_BlackPiece][x_Queen] = new Piece(CLR_BLACK, TYP_QUEEN, new KnightMove());
+        tab[y_WhitePiece][x_Queen] = new Piece(CLR_WHITE, TYP_QUEEN, new KnightMove());
 
-        tab[y_BlackPiece][x_King] = new Piece(CLR_BLACK, TYP_KING);
-        tab[y_WhitePiece][x_King] = new Piece(CLR_WHITE, TYP_KING);
+        tab[y_BlackPiece][x_King] = new Piece(CLR_BLACK, TYP_KING, new KnightMove());
+        tab[y_WhitePiece][x_King] = new Piece(CLR_WHITE, TYP_KING, new KnightMove());
     }
 
     public Piece[][] getTab() {
