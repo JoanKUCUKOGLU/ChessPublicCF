@@ -14,7 +14,24 @@ public class ChessModel implements IChess {
     private Board board;
 
     private ChessModel() {
-        this.board = new Board();
+        board = new Board(
+                BOARD_WIDTH,
+                BOARD_HEIGHT,
+
+                BOARD_POS_Y_WHITE_PIECES,
+                BOARD_POS_Y_WHITE_PAWNS,
+                BOARD_POS_Y_BLACK_PAWNS,
+                BOARD_POS_Y_BLACK_PIECES,
+
+                BOARD_POS_X_QUEENSIDE_ROOK,
+                BOARD_POS_X_QUEENSIDE_KNIGHT,
+                BOARD_POS_X_QUEENSIDE_BISHOP,
+                BOARD_POS_X_QUEEN,
+                BOARD_POS_X_KING,
+                BOARD_POS_X_KINGSIDE_BISHOP,
+                BOARD_POS_X_KINGSIDE_KNIGHT,
+                BOARD_POS_X_KINGSIDE_ROOK
+        );
     }
 
     public static IChess getInstance() {
@@ -26,22 +43,41 @@ public class ChessModel implements IChess {
 
     //@Overridegit remote add origin https://github.com/JoanKUCUKOGLU/ChessPublicCF.git
     public void reinit() {
-
     }
 
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        throw new EmptyCellException();
+
+        Piece current_piece = board.getPiece(p.y, p.x);
+
+        if (p.y < 0 || p.y > 7 || p.x < 0 || p.x > 7) {
+            throw new OutOfBoardException();
+        } else if (current_piece == null) {
+            throw new EmptyCellException();
+        } else {
+            return current_piece.getType();
+        }
     }
+
 
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
-        throw new EmptyCellException();
+
+        Piece current_piece = board.getPiece(p.y, p.x);
+
+        if (p.y < 0 || p.y > 7 || p.x < 0 || p.x > 7) {
+            throw new OutOfBoardException();
+        } else if (current_piece == null) {
+            throw new EmptyCellException();
+        } else {
+            return current_piece.getColor();
+        }
     }
+
 
     @Override
     public int getNbRemainingPieces(ChessColor color) {
-        return 0;
+        return board.getNbRemainingPieces(color);
     }
 
     @Override

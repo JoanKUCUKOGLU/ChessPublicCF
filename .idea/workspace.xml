@@ -1,14 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cedc340-135f-452c-abe6-2c85985a61eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" afterDir="false" />
+    <list default="true" id="2cedc340-135f-452c-abe6-2c85985a61eb" name="Default Changelist" comment="Merge branch 'master' of https://github.com/JoanKUCUKOGLU/ChessPublicCF&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/fr/rphstudio/chess/game/ChessModel.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/lib/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IChess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IChess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/icon16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/icon32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/info/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/dyn4j-3.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/jinput-2.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/jorbis-0.0.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/jutils-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/libjinput-osx.jnilib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/liblwjgl.jnilib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/lwjgl-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/openal.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/lib/slick2d-core-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/backgnd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/board2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/chess_sprites2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/fontchess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/highlight2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/newChess.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/quit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/reinit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/selection2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/sprites/undo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/icon16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/icon32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/info/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/dyn4j-3.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/jinput-2.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/jorbis-0.0.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/jutils-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/libjinput-linux.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/libjinput-linux64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/libjinput-osx.jnilib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/liblwjgl.jnilib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/liblwjgl.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/liblwjgl64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/libopenal.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/libopenal64.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/lwjgl-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/lib/slick2d-core-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/backgnd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/board2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/chess_sprites2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/fontchess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/highlight2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/newChess.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/quit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/reinit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/selection2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/sprites/undo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/icon16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/icon32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/info/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/dyn4j-3.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jinput-2.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jinput-dx8.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jinput-dx8_64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jinput-raw.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jinput-raw_64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jinput-wintab.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jorbis-0.0.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/jutils-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/lwjgl-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/lib/slick2d-core-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/backgnd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/board2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/chess_sprites2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/fontchess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/highlight2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/newChess.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/quit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/reinit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/selection2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/sprites/undo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/antrun/build-main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1164491423.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1164491423.tmp/game.sh.942106225.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.127117384.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.127117384.tmp/game.sh.1434637807.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1638647961.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1638647961.tmp/game.sh.890946764.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.999490584.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.999490584.tmp/game.sh.164215499.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/interf/ChessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/interf/EmptyCellException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/interf/OutOfBoardException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/launcher/ChessFontManager$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/launcher/ChessFontManager$LetterInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/launcher/ChessFontManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/launcher/ChessGameController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/natives/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/natives/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,20 +121,45 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IChess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="442">
+              <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
               <folding>
-                <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#419#420#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2297#2298#0" expanded="true" />
+                <element signature="e#2604#2605#0" expanded="true" />
+                <element signature="e#2803#2804#0" expanded="true" />
+                <element signature="e#2915#2916#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,29 +168,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="222">
+              <caret line="69" column="32" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2185#2186#0" expanded="true" />
+                <element signature="e#2211#2212#0" expanded="true" />
+                <element signature="e#2252#2253#0" expanded="true" />
+                <element signature="e#2282#2283#0" expanded="true" />
+                <element signature="e#2325#2326#0" expanded="true" />
+                <element signature="e#2363#2364#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IChess.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2423">
-              <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
+            <state relative-caret-position="221">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15130">
+              <caret line="913" column="50" selection-start-line="913" selection-start-column="50" selection-end-line="913" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,25 +210,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1050" />
+    <option name="x" value="240" />
+    <option name="y" value="130" />
+    <option name="width" value="1440" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,6 +244,13 @@
               <item name="RomuChess" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RomuChess" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
@@ -154,6 +298,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,6 +312,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,70 +349,97 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556023520334</updated>
-      <workItem from="1556023521709" duration="4014000" />
+      <workItem from="1556023521709" duration="1330000" />
+      <workItem from="1556040664389" duration="8474000" />
+      <workItem from="1556088705309" duration="1652000" />
     </task>
-    <task id="LOCAL-00001" summary="Story 1 done">
-      <created>1556025294149</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1556025294149</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4014000" />
+    <option name="totallyTimeSpent" value="12773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20201342" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16174497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.09497207" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32960895" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1624161" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Story 1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Story 1 done" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/icon32x32.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icon16x16.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -273,41 +447,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="914" column="38" selection-start-line="914" selection-start-column="38" selection-end-line="914" selection-end-column="38" />
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="123" column="36" selection-start-line="123" selection-start-column="36" selection-end-line="123" selection-end-column="36" />
+        <state relative-caret-position="15130">
+          <caret line="913" column="50" selection-start-line="913" selection-start-column="50" selection-end-line="913" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IChess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2423">
-          <caret line="227" column="16" selection-start-line="227" selection-start-column="16" selection-end-line="227" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="150" column="43" selection-start-line="150" selection-start-column="43" selection-end-line="150" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="222">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2185#2186#0" expanded="true" />
+            <element signature="e#2211#2212#0" expanded="true" />
+            <element signature="e#2252#2253#0" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2363#2364#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="442">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
           <folding>
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2604#2605#0" expanded="true" />
+            <element signature="e#2803#2804#0" expanded="true" />
+            <element signature="e#2915#2916#0" expanded="true" />
           </folding>
         </state>
       </provider>
