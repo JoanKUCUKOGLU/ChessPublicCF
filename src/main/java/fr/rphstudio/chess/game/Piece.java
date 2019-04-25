@@ -10,17 +10,17 @@ public class Piece {
 
     private IChess.ChessColor color;
     private IChess.ChessType type;
-    private int nb_Movement;
+    private int nbMovement;
     private IMove imove;
 
     public Piece(
             IChess.ChessColor myColor,
             IChess.ChessType myType,
             IMove im
-    ){
+    ) {
         this.color = myColor;
         this.type = myType;
-        this.nb_Movement = 0;
+        this.nbMovement = 0;
         this.imove = im;
     }
 
@@ -32,13 +32,15 @@ public class Piece {
         return type;
     }
 
-    public int getNb_Movement() {
-        return nb_Movement;
+    public int getNbMovement() {
+        return nbMovement;
     }
 
-    public void setNb_Movement(int nb_Movement) {
-        this.nb_Movement = nb_Movement;
+    public void increaseNbMovement(int nbMovement) {
+        this.nbMovement += 1;
     }
+
+    public void decreaseNbMovement(int nbMovement) { this.nbMovement -= 1; }
 
     public List<IChess.ChessPosition> getMoves(IChess.ChessPosition p, Board board) {
 
@@ -46,6 +48,5 @@ public class Piece {
 
     }
 
-    
 
 }

@@ -37,20 +37,20 @@ public class Board{
             tab[y_WhitePaws][i] = new Piece(CLR_WHITE, TYP_PAWN, new KnightMove());
         }
 
-        tab[y_BlackPiece][x_LeftRook] = new Piece(CLR_BLACK, TYP_ROOK, new KnightMove());
-        tab[y_BlackPiece][x_RightRook] = new Piece(CLR_BLACK, TYP_ROOK, new KnightMove());
-        tab[y_WhitePiece][x_LeftRook] = new Piece(CLR_WHITE, TYP_ROOK, new KnightMove());
-        tab[y_WhitePiece][x_RightRook] = new Piece(CLR_WHITE, TYP_ROOK, new KnightMove());
+        tab[y_BlackPiece][x_LeftRook] = new Piece(CLR_BLACK, TYP_ROOK, new RookMove());
+        tab[y_BlackPiece][x_RightRook] = new Piece(CLR_BLACK, TYP_ROOK, new RookMove());
+        tab[y_WhitePiece][x_LeftRook] = new Piece(CLR_WHITE, TYP_ROOK, new RookMove());
+        tab[y_WhitePiece][x_RightRook] = new Piece(CLR_WHITE, TYP_ROOK, new RookMove());
 
         tab[y_BlackPiece][x_LeftKnight] = new Piece(CLR_BLACK, TYP_KNIGHT, new KnightMove());
         tab[y_BlackPiece][x_RightKnight] = new Piece(CLR_BLACK, TYP_KNIGHT, new KnightMove());
         tab[y_WhitePiece][x_LeftKnight] = new Piece(CLR_WHITE, TYP_KNIGHT, new KnightMove());
         tab[y_WhitePiece][x_RightKnight] = new Piece(CLR_WHITE, TYP_KNIGHT, new KnightMove());
 
-        tab[y_BlackPiece][x_LeftBishop] = new Piece(CLR_BLACK, TYP_BISHOP, new KnightMove());
-        tab[y_BlackPiece][x_RightBishop] = new Piece(CLR_BLACK, TYP_BISHOP, new KnightMove());
-        tab[y_WhitePiece][x_LeftBishop] = new Piece(CLR_WHITE, TYP_BISHOP, new KnightMove());
-        tab[y_WhitePiece][x_RightBishop] = new Piece(CLR_WHITE, TYP_BISHOP, new KnightMove());
+        tab[y_BlackPiece][x_LeftBishop] = new Piece(CLR_BLACK, TYP_BISHOP, new BishopMove());
+        tab[y_BlackPiece][x_RightBishop] = new Piece(CLR_BLACK, TYP_BISHOP, new BishopMove());
+        tab[y_WhitePiece][x_LeftBishop] = new Piece(CLR_WHITE, TYP_BISHOP, new BishopMove());
+        tab[y_WhitePiece][x_RightBishop] = new Piece(CLR_WHITE, TYP_BISHOP, new BishopMove());
 
         tab[y_BlackPiece][x_Queen] = new Piece(CLR_BLACK, TYP_QUEEN, new KnightMove());
         tab[y_WhitePiece][x_Queen] = new Piece(CLR_WHITE, TYP_QUEEN, new KnightMove());
