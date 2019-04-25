@@ -36,11 +36,11 @@ public class Piece {
         return nbMovement;
     }
 
-    public void increaseNbMovement(int nbMovement) {
+    public void increaseNbMovement() {
         this.nbMovement += 1;
     }
 
-    public void decreaseNbMovement(int nbMovement) { this.nbMovement -= 1; }
+    public void decreaseNbMovement() { this.nbMovement -= 1; }
 
     public List<IChess.ChessPosition> getMoves(IChess.ChessPosition p, Board board) {
 

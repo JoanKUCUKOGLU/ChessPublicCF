@@ -32,9 +32,9 @@ public class Board{
 
         // Setting black and white paws
         for(int i = 0; i<8; i++){
-            tab[y_BlackPaws][i] = new Piece(CLR_BLACK, TYP_PAWN, new KnightMove());
+            tab[y_BlackPaws][i] = new Piece(CLR_BLACK, TYP_PAWN, new PawsMove());
 
-            tab[y_WhitePaws][i] = new Piece(CLR_WHITE, TYP_PAWN, new KnightMove());
+            tab[y_WhitePaws][i] = new Piece(CLR_WHITE, TYP_PAWN, new PawsMove());
         }
 
         tab[y_BlackPiece][x_LeftRook] = new Piece(CLR_BLACK, TYP_ROOK, new RookMove());
@@ -95,7 +95,7 @@ public class Board{
 
     public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest){
 
-
+        this.tab[pSource.y][pSource.x].increaseNbMovement();
 
         this.tab[pDest.y][pDest.x] = getPiece(pSource.y,pSource.x);
         this.tab[pSource.y][pSource.x] = null;
