@@ -6,6 +6,7 @@ fr/rphstudio/chess/interf/IChess$ChessColor.class
 fr/rphstudio/chess/launcher/ChessFontManager.class
 fr/rphstudio/chess/game/Board.class
 fr/rphstudio/chess/game/RookMove.class
+fr/rphstudio/chess/game/PawsMove.class
 fr/rphstudio/chess/interf/IChess.class
 fr/rphstudio/chess/game/BishopMove.class
 fr/rphstudio/chess/launcher/MainLauncher.class
