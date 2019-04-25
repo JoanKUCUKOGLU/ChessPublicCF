@@ -14,6 +14,8 @@ public class Board{
 
     private RemovedPieces rp;
 
+    private MoveHistory mh;
+
     public Board(
             int width,
             int height,
