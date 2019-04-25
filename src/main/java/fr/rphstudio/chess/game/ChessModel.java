@@ -5,6 +5,7 @@ import fr.rphstudio.chess.interf.EmptyCellException;
 import fr.rphstudio.chess.interf.IChess;
 import fr.rphstudio.chess.interf.OutOfBoardException;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -156,8 +157,7 @@ public class ChessModel implements IChess {
 
     @Override
     public List<ChessType> getRemovedPieces(ChessColor color) {
-
-        return new ArrayList<>();
+        return board.getRemovePieces(color);
     }
 
     @Override

@@ -2,6 +2,8 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
 
+import java.util.List;
+
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_BLACK;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_WHITE;
 import static fr.rphstudio.chess.interf.IChess.ChessType.*;
@@ -9,6 +11,8 @@ import static fr.rphstudio.chess.interf.IChess.ChessType.*;
 public class Board{
 
     private Piece[][] tab;
+
+    private RemovedPieces rp;
 
     public Board(
             int width,
@@ -29,6 +33,8 @@ public class Board{
             int x_RightRook
     ){
         this.tab = new Piece[height][width];
+
+        this.rp = new RemovedPieces();
 
         // Setting black and white paws
         for(int i = 0; i<8; i++){
@@ -94,10 +100,18 @@ public class Board{
     }
 
     public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest){
-
-
-
+        Piece destPiece = this.tab[pDest.y][pDest.x];
+        Piece srcPiece = this.tab[pSource.y][pSource.x];
+        if(destPiece != null && srcPiece != null){
+            if(destPiece.getColor() != srcPiece.getColor()){
+                this.rp.addRemovedPieces(destPiece);
+            }
+        }
         this.tab[pDest.y][pDest.x] = getPiece(pSource.y,pSource.x);
         this.tab[pSource.y][pSource.x] = null;
+    }
+
+    public List<IChess.ChessType> getRemovePieces(IChess.ChessColor color){
+        return rp.getRPList(color);
     }
 }

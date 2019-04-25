@@ -2,19 +2,11 @@
 <project name="maven-antrun-" default="main"  >
 <target name="main">
   <echo>Using env.test.properties</echo>
-<<<<<<< HEAD
   <copy todir="C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\target/../lib">
     <fileset includes="**" dir="C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\target/natives"/>
   </copy>
   <copy todir="C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\target/..">
     <fileset includes="**" dir="C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\target/../src/main/resources"/>
-=======
-  <copy todir="/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/target/../lib">
-    <fileset includes="**" dir="/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/target/natives"/>
-  </copy>
-  <copy todir="/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/target/..">
-    <fileset includes="**" dir="/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/target/../src/main/resources"/>
->>>>>>> 68cfdefe714f2e4fa049be479732245dc3854c70
   </copy>
 </target>
 </project>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fr\rphstudio\chess\launcher\MainLauncher.class
 fr\rphstudio\chess\interf\IChess$ChessKingState.class
 fr\rphstudio\chess\game\RookMove.class
@@ -7,6 +6,7 @@ fr\rphstudio\chess\launcher\ChessFontManager$1.class
 fr\rphstudio\chess\interf\ChessException.class
 fr\rphstudio\chess\launcher\ChessFontManager$LetterInfo.class
 fr\rphstudio\chess\launcher\ChessFontManager.class
+fr\rphstudio\chess\game\RemovedPieces.class
 fr\rphstudio\chess\game\KnightMove.class
 fr\rphstudio\chess\game\ChessModel.class
 fr\rphstudio\chess\game\Piece.class
@@ -21,25 +21,3 @@ fr\rphstudio\chess\game\Board.class
 fr\rphstudio\chess\interf\IChess.class
 fr\rphstudio\chess\interf\IChess$ChessType.class
 fr\rphstudio\chess\game\KingMove.class
-=======
-fr/rphstudio/chess/launcher/ChessFontManager$1.class
-fr/rphstudio/chess/launcher/ChessFontManager$LetterInfo.class
-fr/rphstudio/chess/game/ChessModel.class
-fr/rphstudio/chess/interf/IMove.class
-fr/rphstudio/chess/interf/IChess$ChessColor.class
-fr/rphstudio/chess/launcher/ChessFontManager.class
-fr/rphstudio/chess/game/Board.class
-fr/rphstudio/chess/game/RookMove.class
-fr/rphstudio/chess/interf/IChess.class
-fr/rphstudio/chess/game/BishopMove.class
-fr/rphstudio/chess/launcher/MainLauncher.class
-fr/rphstudio/chess/interf/IChess$ChessPosition.class
-fr/rphstudio/chess/game/Piece.class
-fr/rphstudio/chess/interf/IChess$ChessType.class
-fr/rphstudio/chess/interf/ChessException.class
-fr/rphstudio/chess/launcher/ChessGameController.class
-fr/rphstudio/chess/interf/OutOfBoardException.class
-fr/rphstudio/chess/interf/IChess$ChessKingState.class
-fr/rphstudio/chess/game/KnightMove.class
-fr/rphstudio/chess/interf/EmptyCellException.class
->>>>>>> 68cfdefe714f2e4fa049be479732245dc3854c70
