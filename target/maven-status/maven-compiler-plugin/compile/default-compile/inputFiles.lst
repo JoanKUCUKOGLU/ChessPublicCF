@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\interf\IChess.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\interf\EmptyCellException.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\game\QueenMove.java
@@ -13,23 +12,7 @@ C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rp
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\interf\IMove.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\launcher\ChessFontManager.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\game\BishopMove.java
+C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\game\PawsMove.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\interf\OutOfBoardException.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\launcher\MainLauncher.java
 C:\Users\Mélanie\Desktop\ChessPublicCF-master\ChessPublicCF\src\main\java\fr\rphstudio\chess\launcher\ChessGameController.java
-=======
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/PawsMove.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/interf/EmptyCellException.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/interf/IChess.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/KnightMove.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/launcher/ChessFontManager.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/ChessModel.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/Piece.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/interf/OutOfBoardException.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/interf/ChessException.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/RookMove.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/BishopMove.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/game/Board.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/interf/IMove.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java
-/Users/kucukoglujoan/IdeaProjects/ChessPublicCF/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java
->>>>>>> a0449983de9773ed0406c59d5c297a27b0e02c2f

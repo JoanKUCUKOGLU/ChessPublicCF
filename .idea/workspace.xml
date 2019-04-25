@@ -2,21 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="025c1756-1ee3-48f9-924a-1dc52b7555cd" name="Default Changelist" comment="Stories 2 &amp; 3 done">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/PawsMove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1006178805.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1006178805.tmp/game.sh.192898531.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.323865844.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.323865844.tmp/game.sh.1944404226.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.892093229.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.892093229.tmp/game.sh.768096147.filtered" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.938990718.tmp/game.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.938990718.tmp/game.sh.1691212086.filtered" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Piece.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -51,10 +55,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
+            <state relative-caret-position="18">
+              <caret line="140" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4953#4954#0" expanded="true" />
                 <element signature="e#5004#5005#0" expanded="true" />
               </folding>
             </state>
@@ -68,6 +73,18 @@
               <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="17" />
               <folding>
                 <element signature="e#0#10426#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IMove.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,26 +115,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RookMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="18">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#598#599#0" expanded="true" />
                 <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#801#802#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +133,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
+            <state relative-caret-position="245">
+              <caret line="111" column="16" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2627#2628#0" expanded="true" />
@@ -136,33 +143,18 @@
                 <element signature="e#2724#2725#0" expanded="true" />
                 <element signature="e#2767#2768#0" expanded="true" />
                 <element signature="e#2804#2805#0" expanded="true" />
-                <element signature="e#3805#3806#0" expanded="true" />
-                <element signature="e#3842#3843#0" expanded="true" />
+                <element signature="e#4188#4189#0" expanded="true" />
+                <element signature="e#4230#4231#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RemovedPieces.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/PawsMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/KnightMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="36">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -199,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/KingMove.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RemovedPieces.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/PawsMove.java" />
         <option value="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" />
       </list>
     </option>
@@ -262,6 +255,15 @@
               <item name="chess" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChessPublicCF" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chess" type="462c0819:PsiDirectoryNode" />
+              <item name="interf" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -273,7 +275,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556198397467" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556200970330" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -357,17 +359,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.053285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26820603" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.58259326" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.44937834" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -456,25 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1940">
-          <folding>
-            <element signature="e#0#5149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/BishopMove.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -489,16 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -526,10 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/KingMove.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RemovedPieces.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -546,10 +519,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/QueenMove.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/KingMove.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="40" />
+        <state relative-caret-position="1377">
+          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/interf/IMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -566,43 +549,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/PawsMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="18">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#598#599#0" expanded="true" />
             <element signature="e#626#627#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RemovedPieces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
+        <state relative-caret-position="18">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4953#4954#0" expanded="true" />
             <element signature="e#5004#5005#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/MainLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#0#5149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/launcher/ChessGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="984" selection-start-line="984" selection-end-line="984" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/QueenMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
+        <state relative-caret-position="245">
+          <caret line="111" column="16" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2627#2628#0" expanded="true" />
@@ -611,8 +624,8 @@
             <element signature="e#2724#2725#0" expanded="true" />
             <element signature="e#2767#2768#0" expanded="true" />
             <element signature="e#2804#2805#0" expanded="true" />
-            <element signature="e#3805#3806#0" expanded="true" />
-            <element signature="e#3842#3843#0" expanded="true" />
+            <element signature="e#4188#4189#0" expanded="true" />
+            <element signature="e#4230#4231#0" expanded="true" />
           </folding>
         </state>
       </provider>

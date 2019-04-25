@@ -108,7 +108,13 @@ public class Board{
             }
         }
         this.tab[pSource.y][pSource.x].increaseNbMovement();
-        this.tab[pDest.y][pDest.x] = getPiece(pSource.y,pSource.x);
+        if(pDest.y == 0 && getPiece(pSource.y,pSource.x).getType() == TYP_PAWN && getPiece(pSource.y,pSource.x).getColor() == CLR_WHITE ||
+                pDest.y == 7 && getPiece(pSource.y,pSource.x).getType() == TYP_PAWN && getPiece(pSource.y,pSource.x).getColor() == CLR_BLACK){
+            this.tab[pDest.y][pDest.x] = new Piece(getPiece(pSource.y,pSource.x).getColor(), TYP_QUEEN, new QueenMove());
+        }
+        else{
+            this.tab[pDest.y][pDest.x] = getPiece(pSource.y,pSource.x);
+        }
         this.tab[pSource.y][pSource.x] = null;
     }
 
