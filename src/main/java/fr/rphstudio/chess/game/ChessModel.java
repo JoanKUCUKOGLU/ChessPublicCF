@@ -63,14 +63,18 @@ public class ChessModel implements IChess {
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException {
 
-        Piece current_piece = board.getPiece(p.y, p.x);
+        Piece current_piece;
 
         if (p.y < 0 || p.y > 7 || p.x < 0 || p.x > 7) {
             throw new OutOfBoardException();
-        } else if (current_piece == null) {
-            throw new EmptyCellException();
         } else {
-            return current_piece.getColor();
+            current_piece = board.getPiece(p.y, p.x);
+
+            if (current_piece == null) {
+                throw new EmptyCellException();
+            } else {
+                return current_piece.getColor();
+            }
         }
     }
 
