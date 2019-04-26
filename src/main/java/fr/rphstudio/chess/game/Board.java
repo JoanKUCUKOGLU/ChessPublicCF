@@ -107,7 +107,8 @@ public class Board {
     }
 
     public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest) {
-        this.mi = new MoveInfo(pSource, pDest, this, false);
+
+        this.mi = new MoveInfo(pSource, pDest, this);
         this.mh.AddMoveInfo(this.mi);
 
         Piece destPiece = this.tab[pDest.y][pDest.x];
@@ -128,25 +129,35 @@ public class Board {
         if (srcPiece.getType() == TYP_PAWN &&
                 (destPiece == null) &&
                 (abs(pSource.y - pDest.y) == 1 && abs(pSource.x - pDest.x) == 1)) {
-
             Piece passPiece = this.tab[pSource.y][pDest.x];
             this.rp.addRemovedPieces(passPiece);
+            this.mi.finalPiece = passPiece;
+            this.mi.enPassant = true;
             this.tab[pSource.y][pDest.x] = null;
-
         }
     }
 
-    public boolean IsChangement() {
+    public boolean Rewind() {
+
         if (this.mh.getHistory().size() > 0) {
             Piece iPiece = this.mh.getHistory().get(this.mh.getHistory().size() - 1).initialPiece;
             Piece fPiece = this.mh.getHistory().get(this.mh.getHistory().size() - 1).finalPiece;
             Boolean isRemoved = this.mh.getHistory().get(this.mh.getHistory().size() - 1).isRemoved;
+            Boolean enPassant = this.mh.getHistory().get(this.mh.getHistory().size() - 1).enPassant;
             IChess.ChessPosition ip = this.mh.getHistory().get(this.mh.getHistory().size() - 1).initialPosition;
             IChess.ChessPosition fp = this.mh.getHistory().get(this.mh.getHistory().size() - 1).finalPosition;
+
             this.tab[ip.y][ip.x] = iPiece;
-            this.tab[fp.y][fp.x] = fPiece;
+
             if (isRemoved) {
                 this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size() - 1);
+                this.tab[fp.y][fp.x] = fPiece;
+            } else if(enPassant){
+                this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size()-1);
+                this.tab[ip.y][fp.x] = fPiece;
+                this.tab[fp.y][fp.x] = null;
+            } else {
+                this.tab[fp.y][fp.x] = null;
             }
             this.mh.getHistory().remove(this.mh.getHistory().size() - 1);
             this.tab[ip.y][ip.x].decreaseNbMovement();
