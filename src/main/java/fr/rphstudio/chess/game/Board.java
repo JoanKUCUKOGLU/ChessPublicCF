@@ -241,4 +241,5 @@ public class Board {
         // no enemy possible move that threats the king has been found
         return ChessKingState.KING_SAFE;
     }
+
 }

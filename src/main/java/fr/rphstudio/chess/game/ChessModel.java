@@ -119,7 +119,7 @@ public class ChessModel implements IChess {
                 Board brd = board.clone();
 
 
-                if (brd.getPiece(p.y, p.x) != null && brd.getPiece(pos.y, pos.x) != null) {
+                if (brd.getPiece(pos.y, pos.x) != null) {
                     brd.movePiece(p, pos);
 
                     brd.getPiece(pos.y, pos.x).decreaseNbMovement();
