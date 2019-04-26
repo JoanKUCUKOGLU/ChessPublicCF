@@ -6,23 +6,6 @@
 =======
     <list default="true" id="025c1756-1ee3-48f9-924a-1dc52b7555cd" name="Default Changelist" comment="Stories 2 &amp; 3 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/MoveHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/MoveHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/MoveInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/MoveInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-linux/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-release-windows/Chess-1.6.79/Chess-1.6.79.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.exe" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
 >>>>>>> 4ed6818730ec2c1d434a898f9ffbc545a99e1026
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -70,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+            <state relative-caret-position="-430">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5404#5405#0" expanded="true" />
@@ -355,11 +338,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556198397467" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556280125814" />
->>>>>>> 4ed6818730ec2c1d434a898f9ffbc545a99e1026
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556281104163" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -438,7 +417,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
 <<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" weight="0.2725322" />
@@ -453,23 +432,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Run" order="2" weight="0.053285968" />
-=======
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
->>>>>>> 4ed6818730ec2c1d434a898f9ffbc545a99e1026
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6927176" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4985694" weight="0.5819277" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32771084" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.49928468" visible="true" weight="0.32771084" />
-=======
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.18472469" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.20426288" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
 >>>>>>> 4ed6818730ec2c1d434a898f9ffbc545a99e1026
@@ -779,23 +749,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-139">
-          <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2717#2718#0" expanded="true" />
-            <element signature="e#2743#2744#0" expanded="true" />
-            <element signature="e#2785#2786#0" expanded="true" />
-            <element signature="e#2815#2816#0" expanded="true" />
-            <element signature="e#2858#2859#0" expanded="true" />
-            <element signature="e#2895#2896#0" expanded="true" />
-            <element signature="e#2950#2951#0" expanded="true" />
-            <element signature="e#2988#2989#0" expanded="true" />
-            <element signature="e#4433#4434#0" expanded="true" />
-=======
-        <state relative-caret-position="199">
-          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+        <state relative-caret-position="-430">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5404#5405#0" expanded="true" />
