@@ -149,7 +149,7 @@ public class Board {
                 this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size() - 1);
             }
             this.mh.getHistory().remove(this.mh.getHistory().size() - 1);
-
+            this.tab[ip.y][ip.x].decreaseNbMovement();
             return true;
         }
         return false;
