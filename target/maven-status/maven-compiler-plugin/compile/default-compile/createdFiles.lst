@@ -8,9 +8,11 @@ fr\rphstudio\chess\game\KnightMove.class
 fr\rphstudio\chess\game\ChessModel.class
 fr\rphstudio\chess\game\Piece.class
 fr\rphstudio\chess\game\QueenMove.class
+fr\rphstudio\chess\game\MoveInfo.class
 fr\rphstudio\chess\game\PawsMove.class
 fr\rphstudio\chess\interf\IChess$ChessColor.class
 fr\rphstudio\chess\interf\EmptyCellException.class
+fr\rphstudio\chess\game\MoveHistory.class
 fr\rphstudio\chess\game\BishopMove.class
 fr\rphstudio\chess\interf\IChess.class
 fr\rphstudio\chess\interf\IChess$ChessType.class
