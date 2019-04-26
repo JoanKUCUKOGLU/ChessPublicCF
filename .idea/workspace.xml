@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="025c1756-1ee3-48f9-924a-1dc52b7555cd" name="Default Changelist" comment="Add Prise en passant + Reinit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/ChessModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/PawsMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/PawsMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Piece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RemovedPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/RemovedPieces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Chess-1.6.79-mac-osx/Chess-1.6.79/Chess-1.6.79.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1006178805.tmp/game.sh" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1006178805.tmp/game.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1006178805.tmp/game.sh.192898531.filtered" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.1006178805.tmp/game.sh.192898531.filtered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.323865844.tmp/game.sh" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.323865844.tmp/game.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.323865844.tmp/game.sh.1944404226.filtered" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.323865844.tmp/game.sh.1944404226.filtered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.892093229.tmp/game.sh" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.892093229.tmp/game.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.892093229.tmp/game.sh.768096147.filtered" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.892093229.tmp/game.sh.768096147.filtered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.938990718.tmp/game.sh" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.938990718.tmp/game.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.938990718.tmp/game.sh.1691212086.filtered" beforeDir="false" afterPath="$PROJECT_DIR$/target/archive-tmp/fileSetFormatter.938990718.tmp/game.sh.1691212086.filtered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/ChessModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/Piece.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/RemovedPieces.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/rphstudio/chess/game/RemovedPieces.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="025c1756-1ee3-48f9-924a-1dc52b7555cd" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,10 +86,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122">
+            <state relative-caret-position="-139">
               <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2717#2718#0" expanded="true" />
+                <element signature="e#2743#2744#0" expanded="true" />
+                <element signature="e#2785#2786#0" expanded="true" />
+                <element signature="e#2815#2816#0" expanded="true" />
+                <element signature="e#2858#2859#0" expanded="true" />
+                <element signature="e#2895#2896#0" expanded="true" />
+                <element signature="e#2950#2951#0" expanded="true" />
+                <element signature="e#2988#2989#0" expanded="true" />
                 <element signature="e#4433#4434#0" expanded="true" />
               </folding>
             </state>
@@ -334,11 +323,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556090508537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Prise en passant + Reinit">
+      <created>1556280842366</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556280842366</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28806000" />
+    <option name="totallyTimeSpent" value="29047000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -351,7 +347,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2725322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -369,9 +364,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" weight="0.5819277" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.12530121" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4985694" weight="0.5819277" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32771084" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="11" sideWeight="0.49928468" visible="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -419,6 +414,8 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Stories 2 &amp; 3 done" />
     <MESSAGE value="Add Prise en passant + Reinit" />
     <option name="LAST_COMMIT_MESSAGE" value="Add Prise en passant + Reinit" />
@@ -615,10 +612,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/fr/rphstudio/chess/game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122">
+        <state relative-caret-position="-139">
           <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2717#2718#0" expanded="true" />
+            <element signature="e#2743#2744#0" expanded="true" />
+            <element signature="e#2785#2786#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+            <element signature="e#2858#2859#0" expanded="true" />
+            <element signature="e#2895#2896#0" expanded="true" />
+            <element signature="e#2950#2951#0" expanded="true" />
+            <element signature="e#2988#2989#0" expanded="true" />
             <element signature="e#4433#4434#0" expanded="true" />
           </folding>
         </state>
