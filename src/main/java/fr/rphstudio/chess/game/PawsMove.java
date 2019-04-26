@@ -25,32 +25,48 @@ public class PawsMove implements IMove {
         if (color == IChess.ChessColor.CLR_WHITE){
 
             Piece nextPiece = board.getPiece(y-1, x);
+            IChess.ChessPosition pos;
+
+            if (x+1 <= 7) {
+                Piece tryRight = board.getPiece(y-1, x+1);
+                Piece passingRight = board.getPiece(y, x+1);
+
+                if (tryRight != null){
+                    if (tryRight.getColor() != color){
+                        pos = new IChess.ChessPosition(x+1, y-1);
+                        array.add(pos);
+                    }
+                } else if (passingRight != null && tryRight == null) {
+                    if (passingRight.getType() == IChess.ChessType.TYP_PAWN && passingRight.getNbMovement() == 1 && passingRight.getColor() == IChess.ChessColor.CLR_BLACK) {
+                        pos = new IChess.ChessPosition(x+1, y-1);
+                        array.add(pos);
+                    }
+                }
+
+
+            }
+
+            if (x-1 >= 0) {
+                Piece tryLeft = board.getPiece(y-1, x-1);
+                Piece passingLeft = board.getPiece(y, x-1);
+
+
+                if (tryLeft != null){
+                    if (tryLeft.getColor() != color){
+                        pos = new IChess.ChessPosition(x-1, y-1);
+                        array.add(pos);
+                    }
+                } else if (passingLeft != null && tryLeft == null) {
+                    if (passingLeft.getType() == IChess.ChessType.TYP_PAWN && passingLeft.getNbMovement() == 1 && passingLeft.getColor() == IChess.ChessColor.CLR_BLACK) {
+                        pos = new IChess.ChessPosition(x-1, y-1);
+                        array.add(pos);
+                    }
+                }
+            }
 
             if(y-1 > -1 && nextPiece == null){
-                IChess.ChessPosition pos = new IChess.ChessPosition(x, y-1);
+                pos = new IChess.ChessPosition(x, y-1);
                 array.add(pos);
-
-                if (x+1 <= 7) {
-                    Piece tryRight = board.getPiece(y-1, x+1);
-
-                    if (tryRight != null){
-                        if (tryRight.getColor() != color){
-                            pos = new IChess.ChessPosition(x+1, y-1);
-                            array.add(pos);
-                        }
-                    }
-                }
-
-                if (x-1 >= 0) {
-                    Piece tryLeft = board.getPiece(y-1, x-1);
-
-                    if (tryLeft != null){
-                        if (tryLeft.getColor() != color){
-                            pos = new IChess.ChessPosition(x-1, y-1);
-                            array.add(pos);
-                        }
-                    }
-                }
 
                 if (nbMove == 0 && board.getPiece(y-2, x) == null) {
                     pos = new IChess.ChessPosition(x, y-2);
@@ -68,9 +84,17 @@ public class PawsMove implements IMove {
 
                 if (x+1 <= 7) {
                     Piece tryRight = board.getPiece(y+1, x+1);
+                    Piece passingRight = board.getPiece(y, x+1);
+
 
                     if (tryRight != null){
                         if (tryRight.getColor() != color){
+
+                            pos = new IChess.ChessPosition(x+1, y+1);
+                            array.add(pos);
+                        }
+                    } else if (passingRight != null && tryRight == null) {
+                        if (passingRight.getType() == IChess.ChessType.TYP_PAWN && passingRight.getNbMovement() == 1 && passingRight.getColor() == IChess.ChessColor.CLR_BLACK) {
                             pos = new IChess.ChessPosition(x+1, y+1);
                             array.add(pos);
                         }
@@ -79,9 +103,16 @@ public class PawsMove implements IMove {
 
                 if (x-1 >= 0) {
                     Piece tryLeft = board.getPiece(y+1, x-1);
+                    Piece passingLeft = board.getPiece(y, x-1);
+
 
                     if (tryLeft != null){
                         if (tryLeft.getColor() != color){
+                            pos = new IChess.ChessPosition(x-1, y+1);
+                            array.add(pos);
+                        }
+                    } else if (passingLeft != null && tryLeft == null) {
+                        if (passingLeft.getType() == IChess.ChessType.TYP_PAWN && passingLeft.getNbMovement() == 1 && passingLeft.getColor() == IChess.ChessColor.CLR_BLACK) {
                             pos = new IChess.ChessPosition(x-1, y+1);
                             array.add(pos);
                         }

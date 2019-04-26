@@ -5,7 +5,6 @@ import fr.rphstudio.chess.interf.EmptyCellException;
 import fr.rphstudio.chess.interf.IChess;
 import fr.rphstudio.chess.interf.OutOfBoardException;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +43,25 @@ public class ChessModel implements IChess {
 
     //@Overridegit remote add origin https://github.com/JoanKUCUKOGLU/ChessPublicCF.git
     public void reinit() {
+
+        board = new Board(
+                BOARD_WIDTH,
+                BOARD_HEIGHT,
+
+                BOARD_POS_Y_WHITE_PIECES,
+                BOARD_POS_Y_WHITE_PAWNS,
+                BOARD_POS_Y_BLACK_PAWNS,
+                BOARD_POS_Y_BLACK_PIECES,
+
+                BOARD_POS_X_QUEENSIDE_ROOK,
+                BOARD_POS_X_QUEENSIDE_KNIGHT,
+                BOARD_POS_X_QUEENSIDE_BISHOP,
+                BOARD_POS_X_QUEEN,
+                BOARD_POS_X_KING,
+                BOARD_POS_X_KINGSIDE_BISHOP,
+                BOARD_POS_X_KINGSIDE_KNIGHT,
+                BOARD_POS_X_KINGSIDE_ROOK
+        );
     }
 
     @Override
@@ -89,9 +107,33 @@ public class ChessModel implements IChess {
     public List<ChessPosition> getPieceMoves(ChessPosition p) {
 
         Piece currentPiece = board.getPiece(p.y, p.x);
+        ChessColor color = currentPiece.getColor();
 
-        if(currentPiece != null) {
-            return currentPiece.getMoves(p, board);
+        List<ChessPosition> posListFinal = new ArrayList<>();
+
+        if (currentPiece != null) {
+            List<ChessPosition> posList = currentPiece.getMoves(p, board);
+
+            for (ChessPosition pos : posList) {
+
+                Board brd = board.clone();
+
+
+                if (brd.getPiece(p.y, p.x) != null && brd.getPiece(pos.y, pos.x) != null) {
+                    brd.movePiece(p, pos);
+
+                    brd.getPiece(pos.y, pos.x).decreaseNbMovement();
+                }
+
+                ChessKingState state = brd.getKingState(color);
+
+                if (state == ChessKingState.KING_SAFE) {
+                    posListFinal.add(pos);
+                }
+
+            }
+
+            return posListFinal;
         }
 
         return new ArrayList<>();
@@ -105,54 +147,7 @@ public class ChessModel implements IChess {
     @Override
     public ChessKingState getKingState(ChessColor color) {
 
-        ChessPosition kingPosition = null;
-
-        for (int i = 0; i < 8 && kingPosition == null; i++) {
-
-            for (int j = 0; j < 8 && kingPosition == null; j++) {
-
-                Piece currentPiece = board.getPiece(i, j);
-                if(currentPiece != null){
-                    if (currentPiece.getType() == ChessType.TYP_KING && currentPiece.getColor() == color){
-
-                        kingPosition = new ChessPosition(j,i);
-
-                    }
-                }
-            }
-        }
-        if(kingPosition == null){
-            return ChessKingState.KING_SAFE;
-        }
-
-        // FOr each row
-        for (int i = 0; i < 8; i++) {
-            // For each column
-            for (int j = 0; j < 8; j++) {
-                // Get piece for the current position j,i
-                Piece currentPiece = board.getPiece(i, j);
-                // If the piece exists (the cell is not empty)
-                if(currentPiece != null){
-                    // If the color of the current piece is the enemy color
-                    if(currentPiece.getColor() != color){
-                        // GEt position object for the current piece
-                        ChessPosition currentPos = new ChessPosition(j,i);
-                        // Get the possible moves of the enemy piece
-                        List<ChessPosition> posList = currentPiece.getMoves(currentPos,board);
-                        // For each possible move of the enemy
-                        for(ChessPosition p: posList){
-                            // If the current king position is equals to the enemy destination, that means the king is threaten
-                            if(p.equals(kingPosition)){
-                                return ChessKingState.KING_THREATEN;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        // no enemy possible move that threats the king has been found
-        return ChessKingState.KING_SAFE;
+        return this.board.getKingState(color);
     }
 
     @Override
