@@ -162,7 +162,8 @@ public class ChessModel implements IChess {
 
     @Override
     public boolean undoLastMove() {
-        return false;
+        boolean b  = this.board.IsChangement();
+        return b;
     }
 
     @Override

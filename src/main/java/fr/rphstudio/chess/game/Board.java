@@ -14,6 +14,8 @@ public class Board{
 
     private RemovedPieces rp;
 
+    private MoveInfo mi;
+
     private MoveHistory mh;
 
     public Board(
@@ -38,6 +40,7 @@ public class Board{
 
         this.rp = new RemovedPieces();
 
+        this.mh = new MoveHistory();
         // Setting black and white paws
         for(int i = 0; i<8; i++){
             tab[y_BlackPaws][i] = new Piece(CLR_BLACK, TYP_PAWN, new PawsMove());
@@ -70,7 +73,6 @@ public class Board{
     public Piece[][] getTab() {
         return tab;
     }
-
     public void setTab(Piece[][] tab) {
         this.tab = tab;
     }
@@ -96,19 +98,23 @@ public class Board{
 
             }
         }
-
         return count;
-
     }
 
     public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest){
+        this.mi = new MoveInfo(pSource,pDest,this,false);
+        this.mh.AddMoveInfo(this.mi);
+
         Piece destPiece = this.tab[pDest.y][pDest.x];
         Piece srcPiece = this.tab[pSource.y][pSource.x];
+
         if(destPiece != null && srcPiece != null){
             if(destPiece.getColor() != srcPiece.getColor()){
                 this.rp.addRemovedPieces(destPiece);
+                this.mi.isRemoved = true;
             }
         }
+
         this.tab[pSource.y][pSource.x].increaseNbMovement();
         if(pDest.y == 0 && getPiece(pSource.y,pSource.x).getType() == TYP_PAWN && getPiece(pSource.y,pSource.x).getColor() == CLR_WHITE ||
                 pDest.y == 7 && getPiece(pSource.y,pSource.x).getType() == TYP_PAWN && getPiece(pSource.y,pSource.x).getColor() == CLR_BLACK){
@@ -118,6 +124,25 @@ public class Board{
             this.tab[pDest.y][pDest.x] = getPiece(pSource.y,pSource.x);
         }
         this.tab[pSource.y][pSource.x] = null;
+    }
+
+    public boolean IsChangement(){
+        if(this.mh.getHistory().size() > 0){
+            Piece iPiece = this.mh.getHistory().get(this.mh.getHistory().size()-1).initialPiece;
+            Piece fPiece = this.mh.getHistory().get(this.mh.getHistory().size()-1).finalPiece;
+            Boolean isRemoved = this.mh.getHistory().get(this.mh.getHistory().size()-1).isRemoved;
+            IChess.ChessPosition ip = this.mh.getHistory().get(this.mh.getHistory().size()-1).initialPosition;
+            IChess.ChessPosition fp = this.mh.getHistory().get(this.mh.getHistory().size()-1).finalPosition;
+            this.tab[ip.y][ip.x] = iPiece;
+            this.tab[fp.y][fp.x] = fPiece;
+            if(isRemoved){
+                this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size()-1);
+            }
+            this.mh.getHistory().remove(this.mh.getHistory().size()-1);
+
+            return true;
+        }
+        return false;
     }
 
     public List<IChess.ChessType> getRemovePieces(IChess.ChessColor color){
