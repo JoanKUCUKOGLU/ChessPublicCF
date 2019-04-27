@@ -2,12 +2,15 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
 
+import javax.crypto.spec.PSource;
 import java.util.List;
 
 import static fr.rphstudio.chess.interf.IChess.*;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_BLACK;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_WHITE;
 import static fr.rphstudio.chess.interf.IChess.ChessType.*;
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
 import static java.lang.Math.abs;
 
 public class Board {
@@ -114,26 +117,60 @@ public class Board {
         Piece destPiece = this.tab[pDest.y][pDest.x];
         Piece srcPiece = this.tab[pSource.y][pSource.x];
 
+        Boolean isMoveRoque = FALSE;
 
-        if (destPiece != null && srcPiece != null) {
-            if (destPiece.getColor() != srcPiece.getColor()) {
-                this.rp.addRemovedPieces(destPiece);
-                this.mi.isRemoved = true;
+        if (srcPiece != null && destPiece != null) {
+
+            if (srcPiece.getType() == TYP_KING && srcPiece.getNbMovement() == 0 && destPiece.getType() == TYP_ROOK && destPiece.getNbMovement() == 0) {
+
+                isMoveRoque = TRUE;
+                if (pSource.x - pDest.x == -3) {
+
+
+                    this.tab[pSource.y][pSource.x].increaseNbMovement();
+
+                    this.tab[pSource.y][pSource.x + 2] = getPiece(pSource.y, pSource.x);
+                    this.tab[pSource.y][pSource.x] = null;
+
+                    this.tab[pSource.y][pSource.x + 1] = getPiece(pSource.y, 7);
+                    this.tab[pSource.y][7] = null;
+
+                } else {
+
+                    this.tab[pSource.y][pSource.x].increaseNbMovement();
+
+                    this.tab[pSource.y][pSource.x - 2] = getPiece(pSource.y, pSource.x);
+                    this.tab[pSource.y][pSource.x] = null;
+
+                    this.tab[pDest.y][pSource.x - 1] = getPiece(pSource.y, 0);
+                    this.tab[pSource.y][0] = null;
+
+                }
+                mi.isRoque = true;
             }
         }
 
-        this.tab[pSource.y][pSource.x].increaseNbMovement();
-        this.tab[pDest.y][pDest.x] = getPiece(pSource.y, pSource.x);
-        this.tab[pSource.y][pSource.x] = null;
+        if (isMoveRoque == FALSE) {
+            if (destPiece != null && srcPiece != null) {
+                if (destPiece.getColor() != srcPiece.getColor()) {
+                    this.rp.addRemovedPieces(destPiece);
+                    this.mi.isRemoved = true;
+                }
+            }
 
-        if (srcPiece.getType() == TYP_PAWN &&
-                (destPiece == null) &&
-                (abs(pSource.y - pDest.y) == 1 && abs(pSource.x - pDest.x) == 1)) {
-            Piece passPiece = this.tab[pSource.y][pDest.x];
-            this.rp.addRemovedPieces(passPiece);
-            this.mi.finalPiece = passPiece;
-            this.mi.enPassant = true;
-            this.tab[pSource.y][pDest.x] = null;
+            this.tab[pSource.y][pSource.x].increaseNbMovement();
+            this.tab[pDest.y][pDest.x] = getPiece(pSource.y, pSource.x);
+            this.tab[pSource.y][pSource.x] = null;
+
+            if (srcPiece.getType() == TYP_PAWN &&
+                    (destPiece == null) &&
+                    (abs(pSource.y - pDest.y) == 1 && abs(pSource.x - pDest.x) == 1)) {
+                Piece passPiece = this.tab[pSource.y][pDest.x];
+                this.rp.addRemovedPieces(passPiece);
+                this.mi.finalPiece = passPiece;
+                this.mi.enPassant = true;
+                this.tab[pSource.y][pDest.x] = null;
+            }
         }
     }
 
@@ -144,6 +181,7 @@ public class Board {
             Piece fPiece = this.mh.getHistory().get(this.mh.getHistory().size() - 1).finalPiece;
             Boolean isRemoved = this.mh.getHistory().get(this.mh.getHistory().size() - 1).isRemoved;
             Boolean enPassant = this.mh.getHistory().get(this.mh.getHistory().size() - 1).enPassant;
+            Boolean isRoque = this.mh.getHistory().get(this.mh.getHistory().size() - 1).isRoque;
             IChess.ChessPosition ip = this.mh.getHistory().get(this.mh.getHistory().size() - 1).initialPosition;
             IChess.ChessPosition fp = this.mh.getHistory().get(this.mh.getHistory().size() - 1).finalPosition;
 
@@ -152,10 +190,23 @@ public class Board {
             if (isRemoved) {
                 this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size() - 1);
                 this.tab[fp.y][fp.x] = fPiece;
-            } else if(enPassant){
-                this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size()-1);
+            } else if (enPassant) {
+                this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size() - 1);
                 this.tab[ip.y][fp.x] = fPiece;
                 this.tab[fp.y][fp.x] = null;
+            } else if (isRoque) {
+
+                this.tab[fp.y][fp.x] = fPiece;
+
+                if (ip.x - fp.x == -3) {
+                    this.tab[ip.y][ip.x + 2] = null;
+                    this.tab[ip.y][ip.x + 1] = null;
+                } else {
+                    this.tab[ip.y][ip.x - 2] = null;
+                    this.tab[ip.y][ip.x - 1] = null;
+                }
+
+
             } else {
                 this.tab[fp.y][fp.x] = null;
             }

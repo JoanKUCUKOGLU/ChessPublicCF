@@ -9,6 +9,7 @@ public class MoveInfo {
     public Piece finalPiece;
     public Boolean isRemoved;
     public Boolean enPassant;
+    public Boolean isRoque;
     public Board board;
 
     public MoveInfo(IChess.ChessPosition initPos, IChess.ChessPosition finalPos, Board b){
@@ -18,5 +19,6 @@ public class MoveInfo {
         this.finalPosition = finalPos;
         this.isRemoved = false;
         this.enPassant = false;
+        this.isRoque = false;
     }
 }

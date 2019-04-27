@@ -119,11 +119,15 @@ public class ChessModel implements IChess {
                 Board brd = board.clone();
 
 
-                if (brd.getPiece(pos.y, pos.x) != null) {
-                    brd.movePiece(p, pos);
+                brd.getPiece(p.y, p.x).decreaseNbMovement();
+                brd.movePiece(p, pos);
 
+                /*
+                if (brd.getPiece(pos.y, pos.x) != null) {
                     brd.getPiece(pos.y, pos.x).decreaseNbMovement();
                 }
+
+                 */
 
                 ChessKingState state = brd.getKingState(color);
 
@@ -157,7 +161,7 @@ public class ChessModel implements IChess {
 
     @Override
     public boolean undoLastMove() {
-        boolean b  = this.board.Rewind();
+        boolean b = this.board.Rewind();
         return b;
     }
 

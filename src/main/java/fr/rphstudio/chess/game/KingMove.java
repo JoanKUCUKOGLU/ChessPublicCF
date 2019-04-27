@@ -110,7 +110,6 @@ public class KingMove implements IMove {
 
                 for (int i = 5; i < 7; i++) {
                     IChess.ChessPosition pos = new IChess.ChessPosition(i, p.y);
-                    System.out.println(" pos " + pos.y + " - " + pos.x);
                     posi.add(pos);
                 }
 
@@ -126,14 +125,12 @@ public class KingMove implements IMove {
 
 
                     IChess.ChessKingState state = brd.getKingState(color);
-                    System.out.println(state);
 
                     if (state == IChess.ChessKingState.KING_SAFE) {
                         count += 1;
                     }
                 }
 
-                System.out.println(count + " - " + nb);
                 if (count == nb) {
                     IChess.ChessPosition pos = new IChess.ChessPosition(7, p.y);
                     array.add(pos);
@@ -145,7 +142,7 @@ public class KingMove implements IMove {
         nb = 0;
         count = 0;
 
-        for (int i =  3; i > 0; i--) {
+        for (int i = 3; i > 0; i--) {
             nb += 1;
             if (board.getPiece(p.y, i) == null) {
                 count += 1;
@@ -161,7 +158,6 @@ public class KingMove implements IMove {
 
                 for (int i = 3; i > 0; i--) {
                     IChess.ChessPosition pos = new IChess.ChessPosition(i, p.y);
-                    System.out.println(" pos " + pos.y + " - " + pos.x);
                     posi.add(pos);
                 }
 
@@ -177,14 +173,12 @@ public class KingMove implements IMove {
 
 
                     IChess.ChessKingState state = brd.getKingState(color);
-                    System.out.println(state);
 
                     if (state == IChess.ChessKingState.KING_SAFE) {
                         count += 1;
                     }
                 }
 
-                System.out.println(count + " - " + nb);
                 if (count == nb) {
                     IChess.ChessPosition pos = new IChess.ChessPosition(0, p.y);
                     array.add(pos);
