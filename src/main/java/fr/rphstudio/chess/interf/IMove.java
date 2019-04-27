@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IMove {
 
-    List<IChess.ChessPosition> getPossibleMove(IChess.ChessPosition p, Board board);
+    List<IChess.ChessPosition> getPossibleMove(IChess.ChessPosition p, Board board); //An interface method that is called in each Type of move class
 
 }
 

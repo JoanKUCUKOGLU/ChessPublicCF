@@ -1,3 +1,5 @@
+// Queen Move for define the move of the Queen in all direction //
+
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;

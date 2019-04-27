@@ -1,3 +1,5 @@
+// Move History Class, for create and use a list of move during all the game //
+
 package fr.rphstudio.chess.game;
 
 import java.util.ArrayList;
