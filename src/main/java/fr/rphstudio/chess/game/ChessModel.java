@@ -167,7 +167,6 @@ public class ChessModel implements IChess {
 
     @Override
     public long getPlayerDuration(ChessColor color, boolean isPlaying) {
-
-        return this.board.getPlayerDuration(color, isPlaying);
+        return 0;
     }
 }

@@ -3,8 +3,7 @@
 package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
-import org.lwjgl.Sys;
-import java.util.ArrayList;
+
 import javax.crypto.spec.PSource;
 import java.util.List;
 
@@ -57,7 +56,7 @@ public class Board {
             int x_RightKnight,
             int x_RightRook
     ) {
-        // Insranciations //
+        // Instanciations //
 
         this.tab = new Piece[height][width];  // Instanciation of a new Pieces
 
@@ -143,52 +142,19 @@ public class Board {
         }
         return count; // Return the total of pieces for each color
     }
+    public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest) {
 
-    public void movePiece(IChess.ChessPosition pSource, IChess.ChessPosition pDest) { // Method that move a current Piece to a selected destination
-
-        // In the case of a Piece is eaten by another //
 
         Piece destPiece = this.tab[pDest.y][pDest.x]; // Assignment of the Destination Piece (Where the piece will be)
         Piece srcPiece = this.tab[pSource.y][pSource.x]; // Assignment of the Source Piece (Where the piece is actualy)
         this.mi = new MoveInfo(pSource, pDest, this, this.getPlayerDuration(srcPiece.getColor(), true)); //Create a move Info for save the move of the piece
         this.mh.AddMoveInfo(this.mi); // And Add the move info in the list of move info
 
-        if (destPiece != null && srcPiece != null) { // Check if pieces aren't null, if the Destination Piece is not null, that meaan that there is already a Piece in the destination place
-            if (destPiece.getColor() != srcPiece.getColor()) { // If the color of the destination Piece is different to the current piece, it's mean that the destination piece is an enemy of the current piece
-                this.rp.addRemovedPieces(destPiece); // So, the Destination Piece will be eat by the current Piece. The dead piece is add to the list of removed pieces
-                this.mi.isRemoved = true; // In the moveInfo, we can notice that the piece is eaten
-            }
-        }
+        // In the case of a Roque //
+        // The other moves depends of the Roque //
+        Boolean isMoveRoque = FALSE; // Roque Boolean for check if a Roque is played
 
-        // In the case of a simple move (Work after the removed piece part too) //
-
-        this.tab[pSource.y][pSource.x].increaseNbMovement(); // The number of the Piece's Movements increase
-        this.tab[pDest.y][pDest.x] = getPiece(pSource.y, pSource.x); // The piece in the destination box is replace by the source Piece
-        this.tab[pSource.y][pSource.x] = null; // And the box with source Piece is now emptty
-
-        // In the case of the special move "En Passant" //
-
-        if (srcPiece.getType() == TYP_PAWN &&  // Check if the current piece is a Pawn (The En Passant move work only on Pawn)
-                (destPiece == null) &&  // Check is the box of destination is empty (With no Piece's Object)
-                (abs(pSource.y - pDest.y) == 1 && abs(pSource.x - pDest.x) == 1)) {  // Check if there is a difference between current and destination Piece
-            Piece passPiece = this.tab[pSource.y][pDest.x]; // If it's true, get the coords of the enemy piece, that will be eat
-            this.rp.addRemovedPieces(passPiece);// The enemy piece is eaten
-            this.mi.finalPiece = passPiece;// Re-assignement of the finalMove of the current MoveInfo
-            this.mi.enPassant = true;// Notice that the enemy piece is eaten by an "En Passant" Move
-            this.tab[pSource.y][pDest.x] = null; // Set the initial position of the current piece to null
-        }
-
-        { //Try to getting list of all time of the current player
-           /*
-        if(srcPiece.getColor() == CLR_WHITE){
-            this.WhitetimeList.add(this.timeWhite);
-        }else{
-            this.BlacktimeList.add(this.timeBlack);*/
-        }
-
-        Boolean isMoveRoque = FALSE;
-
-        if (srcPiece != null && destPiece != null) {
+        if (srcPiece != null && destPiece != null) { //If a roque is played
 
             if (srcPiece.getType() == TYP_KING && srcPiece.getNbMovement() == 0 && destPiece.getType() == TYP_ROOK && destPiece.getNbMovement() == 0) {
 
@@ -219,7 +185,10 @@ public class Board {
             }
         }
 
-        if (isMoveRoque == FALSE) {
+        if (isMoveRoque == FALSE) { // If a roque is not played, do the others moves normally
+
+            // In the case of a Piece is eaten by another //
+
             if (destPiece != null && srcPiece != null) {
                 if (destPiece.getColor() != srcPiece.getColor()) {
                     this.rp.addRemovedPieces(destPiece);
@@ -227,9 +196,13 @@ public class Board {
                 }
             }
 
+            // In the case of a simple move (Work after the removed piece part too) //
+
             this.tab[pSource.y][pSource.x].increaseNbMovement();
             this.tab[pDest.y][pDest.x] = getPiece(pSource.y, pSource.x);
             this.tab[pSource.y][pSource.x] = null;
+
+            // In the case of the special move "En Passant" //
 
             if (srcPiece.getType() == TYP_PAWN &&
                     (destPiece == null) &&
@@ -240,9 +213,16 @@ public class Board {
                 this.mi.enPassant = true;
                 this.tab[pSource.y][pDest.x] = null;
             }
-
         }
 
+        { //Try to getting list of all time of the current player
+           /*
+            if(srcPiece.getColor() == CLR_WHITE){
+                this.WhitetimeList.add(this.timeWhite);
+            }else{
+                this.BlacktimeList.add(this.timeBlack);
+            */
+        }
     }
 
     public boolean Rewind() { // Method for go back in a case of a bad move (ot for cheat)
@@ -289,7 +269,6 @@ public class Board {
                     this.tab[ip.y][ip.x - 2] = null;
                     this.tab[ip.y][ip.x - 1] = null;
                 }
-
 
             } else {
                 this.tab[fp.y][fp.x] = null;
