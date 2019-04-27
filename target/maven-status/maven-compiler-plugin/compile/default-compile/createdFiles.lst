@@ -15,7 +15,6 @@ fr\rphstudio\chess\interf\EmptyCellException.class
 fr\rphstudio\chess\game\MoveHistory.class
 fr\rphstudio\chess\game\BishopMove.class
 fr\rphstudio\chess\interf\IChess.class
-fr\rphstudio\chess\game\Temps.class
 fr\rphstudio\chess\interf\IChess$ChessType.class
 fr\rphstudio\chess\interf\ChessException.class
 fr\rphstudio\chess\launcher\ChessFontManager.class

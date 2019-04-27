@@ -4,14 +4,16 @@ package fr.rphstudio.chess.game;
 
 import fr.rphstudio.chess.interf.IChess;
 import org.lwjgl.Sys;
-
 import java.util.ArrayList;
+import javax.crypto.spec.PSource;
 import java.util.List;
 
 import static fr.rphstudio.chess.interf.IChess.*;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_BLACK;
 import static fr.rphstudio.chess.interf.IChess.ChessColor.CLR_WHITE;
 import static fr.rphstudio.chess.interf.IChess.ChessType.*;
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
 import static java.lang.Math.abs;
 
 public class Board {
@@ -181,9 +183,64 @@ public class Board {
         if(srcPiece.getColor() == CLR_WHITE){
             this.WhitetimeList.add(this.timeWhite);
         }else{
-            this.BlacktimeList.add(this.timeBlack);
+            this.BlacktimeList.add(this.timeBlack);*/
         }
-        */
+
+        Boolean isMoveRoque = FALSE;
+
+        if (srcPiece != null && destPiece != null) {
+
+            if (srcPiece.getType() == TYP_KING && srcPiece.getNbMovement() == 0 && destPiece.getType() == TYP_ROOK && destPiece.getNbMovement() == 0) {
+
+                isMoveRoque = TRUE;
+                if (pSource.x - pDest.x == -3) {
+
+
+                    this.tab[pSource.y][pSource.x].increaseNbMovement();
+
+                    this.tab[pSource.y][pSource.x + 2] = getPiece(pSource.y, pSource.x);
+                    this.tab[pSource.y][pSource.x] = null;
+
+                    this.tab[pSource.y][pSource.x + 1] = getPiece(pSource.y, 7);
+                    this.tab[pSource.y][7] = null;
+
+                } else {
+
+                    this.tab[pSource.y][pSource.x].increaseNbMovement();
+
+                    this.tab[pSource.y][pSource.x - 2] = getPiece(pSource.y, pSource.x);
+                    this.tab[pSource.y][pSource.x] = null;
+
+                    this.tab[pDest.y][pSource.x - 1] = getPiece(pSource.y, 0);
+                    this.tab[pSource.y][0] = null;
+
+                }
+                mi.isRoque = true;
+            }
+        }
+
+        if (isMoveRoque == FALSE) {
+            if (destPiece != null && srcPiece != null) {
+                if (destPiece.getColor() != srcPiece.getColor()) {
+                    this.rp.addRemovedPieces(destPiece);
+                    this.mi.isRemoved = true;
+                }
+            }
+
+            this.tab[pSource.y][pSource.x].increaseNbMovement();
+            this.tab[pDest.y][pDest.x] = getPiece(pSource.y, pSource.x);
+            this.tab[pSource.y][pSource.x] = null;
+
+            if (srcPiece.getType() == TYP_PAWN &&
+                    (destPiece == null) &&
+                    (abs(pSource.y - pDest.y) == 1 && abs(pSource.x - pDest.x) == 1)) {
+                Piece passPiece = this.tab[pSource.y][pDest.x];
+                this.rp.addRemovedPieces(passPiece);
+                this.mi.finalPiece = passPiece;
+                this.mi.enPassant = true;
+                this.tab[pSource.y][pDest.x] = null;
+            }
+
         }
 
     }
@@ -191,9 +248,8 @@ public class Board {
     public boolean Rewind() { // Method for go back in a case of a bad move (ot for cheat)
 
         if (this.mh.getHistory().size() > 0) { // Check if the List of Move Infos isn't empty
-
             // Get each parameter of the current item of the list (here the last one) //
-
+            Boolean isRoque = this.mh.getHistory().get(this.mh.getHistory().size() - 1).isRoque;
             Piece iPiece = this.mh.getHistory().get(this.mh.getHistory().size() - 1).initialPiece; // Initial Piece
             Piece fPiece = this.mh.getHistory().get(this.mh.getHistory().size() - 1).finalPiece; // Final Piece
             Boolean isRemoved = this.mh.getHistory().get(this.mh.getHistory().size() - 1).isRemoved; // IsRemoved
@@ -208,7 +264,6 @@ public class Board {
             if(this.BlacktimeList.size() > 0) {
                 bLastTime = this.BlacktimeList.get(this.BlacktimeList.size() - 1);
             }
-
             if(this.WhitetimeList.size() > 0) {
                 wLastTime = this.WhitetimeList.get(this.WhitetimeList.size() - 1);
             }
@@ -224,6 +279,18 @@ public class Board {
                 this.rp.getRPList(fPiece.getColor()).remove(this.rp.getRPList(fPiece.getColor()).size()-1); // Same comportement that isRemoved
                 this.tab[ip.y][fp.x] = fPiece; // At the current stzy, podse the final Piece
                 this.tab[fp.y][fp.x] = null;
+            } else if (isRoque) {
+                this.tab[fp.y][fp.x] = fPiece;
+
+                if (ip.x - fp.x == -3) {
+                    this.tab[ip.y][ip.x + 2] = null;
+                    this.tab[ip.y][ip.x + 1] = null;
+                } else {
+                    this.tab[ip.y][ip.x - 2] = null;
+                    this.tab[ip.y][ip.x - 1] = null;
+                }
+
+
             } else {
                 this.tab[fp.y][fp.x] = null;
             }
@@ -329,6 +396,7 @@ public class Board {
         // no enemy possible move that threats the king has been found
         return ChessKingState.KING_SAFE;
     }
+
 
     public long getPlayerDuration(ChessColor color, boolean isPlaying) { // Methods that's return the Player time for each player
         if(isPlaying){ // If playing is true is for Check who is playing
